@@ -1,0 +1,5 @@
+<resources>
+    <style name="Base.Theme.ContactApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">#CC032BCE</item>
+    </style>
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ContactApp</string>
+    <string name="name">Name</string>
+    <string name="save">Save</string>
+    <string name="phone_number">Phone number</string>
+    <string name="delete_contact">Delete contact</string>
+    <string name="btnsave">btnSave</string>
+</resources>

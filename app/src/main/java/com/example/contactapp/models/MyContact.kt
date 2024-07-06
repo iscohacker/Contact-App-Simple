@@ -1,0 +1,1 @@
+package com.example.contactapp.modelsdata class MyContact(var name : String , var phone : String)
