@@ -1,0 +1,36 @@
+Index: app/src/main/res/layout/item_dilog.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"wrap_content\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\">\r\n\r\n    <androidx.cardview.widget.CardView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"250dp\"\r\n        android:layout_margin=\"20dp\"\r\n        app:cardElevation=\"15dp\"\r\n        app:cardCornerRadius=\"15dp\">\r\n        <LinearLayout\r\n            android:orientation=\"vertical\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:background=\"@drawable/edit\"\r\n            android:gravity=\"center\">\r\n\r\n            <EditText\r\n                android:id=\"@+id/new_Name\"\r\n                android:padding=\"5dp\"\r\n                android:layout_width=\"300dp\"\r\n                android:layout_height=\"35dp\"\r\n                android:hint=\"@string/yangi_ismi\"\r\n                android:inputType=\"textCapSentences|textMultiLine\"\r\n                android:maxLines=\"4\"\r\n                android:importantForAutofill=\"no\"\r\n                android:textColor=\"@color/black\"\r\n                android:background=\"#B6DFF6\"/>\r\n\r\n            <EditText\r\n                android:id=\"@+id/new_Phone\"\r\n                android:padding=\"5dp\"\r\n                android:layout_margin=\"10dp\"\r\n                android:layout_width=\"300dp\"\r\n                android:layout_height=\"35dp\"\r\n                android:hint=\"@string/yangi_telefon_raqam\"\r\n                android:inputType=\"phone\"\r\n                android:maxLines=\"4\"\r\n                android:importantForAutofill=\"no\"\r\n                android:textColor=\"@color/black\"\r\n                android:background=\"#B6DFF6\"\r\n                tools:ignore=\"TextFields\" />\r\n\r\n         <LinearLayout\r\n             android:gravity=\"center\"\r\n             android:layout_width=\"match_parent\"\r\n             android:layout_height=\"wrap_content\"\r\n             android:orientation=\"horizontal\">\r\n\r\n\r\n             <com.google.android.material.button.MaterialButton\r\n                 android:layout_width=\"100dp\"\r\n                 android:layout_marginRight=\"10dp\"\r\n                 app:cornerRadius=\"7dp\"\r\n                 android:backgroundTint=\"#007CC1\"\r\n                 android:text=\"Bekor qilish\"\r\n                 android:textSize=\"9dp\"\r\n                 android:textStyle=\"bold\"\r\n                 android:layout_height=\"35dp\"/>\r\n\r\n             <com.google.android.material.button.MaterialButton\r\n                 android:layout_width=\"100dp\"\r\n                 app:cornerRadius=\"7dp\"\r\n                 android:backgroundTint=\"#007CC1\"\r\n                 android:text=\"Saqlash\"\r\n                 android:textSize=\"9dp\"\r\n                 android:textStyle=\"bold\"\r\n                 android:layout_height=\"35dp\"/>\r\n         </LinearLayout>\r\n\r\n        </LinearLayout>\r\n\r\n    </androidx.cardview.widget.CardView>\r\n\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/item_dilog.xml b/app/src/main/res/layout/item_dilog.xml
+--- a/app/src/main/res/layout/item_dilog.xml	(revision 11b41c999a84ab060d3d3e2065e16d6429957634)
++++ b/app/src/main/res/layout/item_dilog.xml	(date 1720506306208)
+@@ -75,4 +75,4 @@
+ 
+     </androidx.cardview.widget.CardView>
+ 
+-</LinearLayout>
+\ No newline at end of file
++</LinearLayout>
+Index: app/src/main/res/menu/my_menu.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r<menu xmlns:android=\"http://schemas.android.com/apk/res/android\">\r    <item\r        android:title=\"Kontaktni o'chirish\"\r        android:id=\"@+id/menu_delete\" />\r    <item\r        android:title=\"@string/edit_contact\"\r        android:id=\"@+id/menu_edit\" />\r</menu>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/menu/my_menu.xml b/app/src/main/res/menu/my_menu.xml
+--- a/app/src/main/res/menu/my_menu.xml	(revision 11b41c999a84ab060d3d3e2065e16d6429957634)
++++ b/app/src/main/res/menu/my_menu.xml	(date 1720504992375)
+@@ -4,6 +4,6 @@
+         android:title="Kontaktni o'chirish"
+         android:id="@+id/menu_delete" />
+     <item
+-        android:title="@string/edit_contact"
++        android:title="Kontaktni tahrirlash"
+         android:id="@+id/menu_edit" />
+ </menu>
+\ No newline at end of file

@@ -26,7 +26,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         android:background="#D5E2EA"
-        android:drawableStart="@drawable/ic_contact"
+        android:drawableStart="@drawable/issim"
         android:drawablePadding="5dp"
         android:hint="Ismi"
         android:importantForAutofill="no"
@@ -35,7 +35,6 @@
         android:padding="10dp"
         android:textColor="@color/black"
         android:textSize="18sp" />
-
     <EditText
         android:id="@+id/edtPhone"
         android:layout_width="match_parent"
@@ -43,7 +42,7 @@
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="10dp"
         android:background="#D4E1E9"
-        android:drawableStart="@drawable/ic_phone"
+        android:drawableStart="@drawable/nuu"
         android:drawablePadding="5dp"
         android:hint="Telefon raqami"
         android:importantForAutofill="no"
