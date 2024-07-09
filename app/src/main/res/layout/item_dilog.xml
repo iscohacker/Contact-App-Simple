@@ -1,6 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="20dp"
+        app:cardElevation="15dp"
+        app:cardCornerRadius="15dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/new_Name"
+                android:padding="5dp"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:hint="@string/yangi_ismi"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines="4"
+                android:importantForAutofill="no"
+                android:textColor="@color/black"
+                android:background="#B6DFF6"/>
+
+            <EditText
+                android:id="@+id/new_Phone"
+                android:padding="5dp"
+                android:layout_margin="10dp"
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:hint="@string/yangi_telefon_raqam"
+                android:inputType="phone"
+                android:maxLines="4"
+                android:importantForAutofill="no"
+                android:textColor="@color/black"
+                android:background="#B6DFF6"
+                tools:ignore="TextFields" />
+
+         <LinearLayout
+             android:gravity="center"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+
+
+             <com.google.android.material.button.MaterialButton
+                 android:layout_width="100dp"
+                 android:layout_marginRight="10dp"
+                 app:cornerRadius="7dp"
+                 android:backgroundTint="#007CC1"
+                 android:text="Bekor qilish"
+                 android:textSize="9dp"
+                 android:textStyle="bold"
+                 android:layout_height="35dp"/>
+
+             <com.google.android.material.button.MaterialButton
+                 android:layout_width="100dp"
+                 app:cornerRadius="7dp"
+                 android:backgroundTint="#007CC1"
+                 android:text="Saqlash"
+                 android:textSize="9dp"
+                 android:textStyle="bold"
+                 android:layout_height="35dp"/>
+         </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>

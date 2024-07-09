@@ -3,7 +3,10 @@
     <string name="name">Name</string>
     <string name="save">Save</string>
     <string name="phone_number">Phone number</string>
-    <string name="delete_contact">Delete contact</string>
+    <string name="delete_contact" translatable="false">Delete contact</string>
     <string name="btnsave">btnSave</string>
     <string name="edit_contact">Edit contact</string>
+    <string name="yangi_telefon_raqam">Yangi telefon raqam</string>
+    <string name="yangi_ismi">Yangi ismi</string>
+    <string name="todo">TODO</string>
 </resources>

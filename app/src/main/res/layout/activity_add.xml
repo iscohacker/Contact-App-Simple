@@ -7,17 +7,23 @@
     android:layout_height="match_parent"
     android:background="@drawable/conif"
     android:gravity="center"
-
     android:orientation="vertical"
     tools:context=".AddActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ko'ntakt ma'lumotlarini yaratish \n                    va saqlash"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#566462"/>
     <EditText
         android:id="@+id/edtName"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:layout_margin="20dp"
-        android:hint="@string/name"
+        android:hint="Ismi"
         android:importantForAutofill="no"
         android:inputType="textCapSentences|textMultiLine"
         android:maxLines="4"
@@ -31,7 +37,7 @@
         android:padding="10dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:hint="@string/phone_number"
+        android:hint="Telefon raqami"
         android:importantForAutofill="no"
         android:inputType="phone"
         android:textColor="@color/black"
@@ -44,5 +50,5 @@
         android:layout_height="50dp"
         android:layout_marginTop="27dp"
         android:contentDescription="@string/btnsave"
-        android:src="@drawable/save" />
+        android:src="@drawable/saqlash" />
 </LinearLayout>
