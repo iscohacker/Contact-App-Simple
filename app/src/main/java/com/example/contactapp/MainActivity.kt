@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.PopupMenu
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -62,7 +63,9 @@ class MainActivity : AppCompatActivity() {
                                         onResume()
                                     }
                                 }
-
+                            }
+                            R.id.menu_edit -> {
+                                val dialog = AlertDialog.Builder(this).create()
                             }
                         }
                         true
