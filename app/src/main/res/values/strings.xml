@@ -12,4 +12,6 @@
     <string name="bekor_qilish">Bekor qilish</string>
     <string name="saqlash">Saqlash</string>
     <string name="ko_ntakt_ma_lumotlarini_yaratish_nva_saqlash">Ko\'ntakt ma\'lumotlarini yaratish\nva saqlash</string>
+    <string name="ismi">Ismi</string>
+    <string name="telefon_raqami">Telefon raqami</string>
 </resources>
