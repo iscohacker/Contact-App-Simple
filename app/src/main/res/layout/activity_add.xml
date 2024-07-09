@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -13,7 +12,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ko'ntakt ma'lumotlarini yaratish \n                    va saqlash"
+        android:text="@string/ko_ntakt_ma_lumotlarini_yaratish_nva_saqlash"
+        android:gravity="center"
         android:textColor="#566462"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -28,7 +28,7 @@
         android:background="#D5E2EA"
         android:drawableStart="@drawable/issim"
         android:drawablePadding="5dp"
-        android:hint="Ismi"
+        android:hint="@string/ismi"
         android:importantForAutofill="no"
         android:inputType="textCapSentences|textMultiLine"
         android:maxLines="4"
@@ -44,7 +44,7 @@
         android:background="#D4E1E9"
         android:drawableStart="@drawable/nuu"
         android:drawablePadding="5dp"
-        android:hint="Telefon raqami"
+        android:hint="@string/telefon_raqami"
         android:importantForAutofill="no"
         android:inputType="phone"
         android:padding="10dp"
