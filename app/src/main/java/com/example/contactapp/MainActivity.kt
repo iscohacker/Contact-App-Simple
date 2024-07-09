@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.contactapp.databinding.ActivityMainBinding
+import com.example.contactapp.databinding.ItemDilogBinding
 import com.example.contactapp.databinding.ItemRvBinding
 import com.example.contactapp.models.MyContact
 import com.example.contactapp.utils.MyData
@@ -64,7 +65,21 @@ class MainActivity : AppCompatActivity() {
                                 }
                             }
                             R.id.menu_edit -> {
-                                val dialog = AlertDialog.Builder(this).create()
+                                val dialog = AlertDialog.Builder(this, R.style.NewDialog).create()
+                                val customStyle = ItemDilogBinding.inflate(layoutInflater)
+                                customStyle.newPhone.setText(MyData.list[i].phone)
+                                customStyle.newName.setText(MyData.list[i].name)
+                                customStyle.btnSave.setOnClickListener {
+                                    MyData.list[i].name = customStyle.newName.text.toString()
+                                    MyData.list[i].phone = customStyle.newPhone.text.toString()
+                                    onResume()
+                                    dialog.cancel()
+                                }
+                                customStyle.btnCancel.setOnClickListener {
+                                    dialog.cancel()
+                                }
+                                dialog.setView(customStyle.root)
+                                dialog.show()
                             }
                         }
                         true
