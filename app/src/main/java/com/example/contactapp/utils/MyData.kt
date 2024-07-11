@@ -1,1 +1,0 @@
-package com.example.contactapp.utilsimport com.example.contactapp.models.MyContactobject MyData {    val list = ArrayList<MyContact>()}

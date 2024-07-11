@@ -13,7 +13,7 @@ import com.example.contactapp.databinding.ActivityMainBinding
 import com.example.contactapp.databinding.ItemDilogBinding
 import com.example.contactapp.databinding.ItemRvBinding
 import com.example.contactapp.models.MyContact
-import com.example.contactapp.utils.MyData
+import com.example.contactapp.utils.Mys
 
 class MainActivity : AppCompatActivity() {
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
@@ -29,8 +29,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+
+        Mys.init(this)
+        val list = Mys.contactList
+
         binding.linerRv.removeAllViews()
-        if (MyData.list.isEmpty()) {
+        if (list.isEmpty()) {
             binding.linerRv.visibility = View.GONE
             binding.tvEmpty.visibility = View.VISIBLE
             binding.imgEmpty.visibility = View.VISIBLE
@@ -38,11 +42,12 @@ class MainActivity : AppCompatActivity() {
             binding.linerRv.visibility = View.VISIBLE
             binding.imgEmpty.visibility = View.GONE
             binding.tvEmpty.visibility = View.GONE
-            for (i in MyData.list.indices) {
+
+            for (i in list.indices) {
                 val itemRv = ItemRvBinding.inflate(layoutInflater)
                 itemRv.root.setOnClickListener {
                     val intent = Intent(Intent.ACTION_DIAL)
-                    intent.data = Uri.parse("tel:${MyData.list[i].phone}")
+                    intent.data = Uri.parse("tel:${list[i].phone}")
                     startActivity(intent)
                 }
                 itemRv.root.setOnLongClickListener {
@@ -51,11 +56,13 @@ class MainActivity : AppCompatActivity() {
                     menu.show()
                     menu.setOnMenuItemClickListener {
                         when (it.itemId) {
+
                             R.id.menu_delete -> {
-                                if (MyData.list[i] == MyContact(itemRv.tvName.text.toString(), itemRv.tvPhone.text.toString())) {
-                                    MyData.list.removeAt(i)
+                                if (list[i] == MyContact(itemRv.tvName.text.toString(), itemRv.tvPhone.text.toString())) {
+                                    list.removeAt(i)
+                                    Mys.contactList = list
                                     binding.linerRv.removeView(itemRv.root)
-                                    if (MyData.list.isEmpty()) {
+                                    if (list.isEmpty()) {
                                         binding.linerRv.visibility = View.GONE
                                         binding.tvEmpty.visibility = View.VISIBLE
                                         binding.imgEmpty.visibility = View.VISIBLE
@@ -64,14 +71,16 @@ class MainActivity : AppCompatActivity() {
                                     }
                                 }
                             }
+
                             R.id.menu_edit -> {
                                 val dialog = AlertDialog.Builder(this, R.style.NewDialog).create()
                                 val customStyle = ItemDilogBinding.inflate(layoutInflater)
-                                customStyle.newPhone.setText(MyData.list[i].phone)
-                                customStyle.newName.setText(MyData.list[i].name)
+                                customStyle.newPhone.setText(list[i].phone)
+                                customStyle.newName.setText(list[i].name)
                                 customStyle.btnSave.setOnClickListener {
-                                    MyData.list[i].name = customStyle.newName.text.toString()
-                                    MyData.list[i].phone = customStyle.newPhone.text.toString()
+                                    list[i].name = customStyle.newName.text.toString()
+                                    list[i].phone = customStyle.newPhone.text.toString()
+                                    Mys.contactList = list
                                     onResume()
                                     dialog.cancel()
                                 }
@@ -87,8 +96,9 @@ class MainActivity : AppCompatActivity() {
 
                     true
                 }
-                itemRv.tvName.text = MyData.list[i].name
-                itemRv.tvPhone.text = MyData.list[i].phone
+
+                itemRv.tvName.text = list[i].name
+                itemRv.tvPhone.text = list[i].phone
                 binding.linerRv.addView(itemRv.root)
             }
         }
